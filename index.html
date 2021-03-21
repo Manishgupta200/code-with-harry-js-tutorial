@@ -6,12 +6,15 @@
 	<title>js</title>
 	<!-- js -->
 	<script>
-			var x=50;
+		function hello(){
+			alert('Hello everyone');
+		}
 	</script>
 	<!-- script.js -->
 	<script src="myscript.js"></script>
 </head>
-<body>
-	<h5 id="main">H5 <span>console</span></h5>
+<body onkeypress="hello()">
+	<button onclick="hello()">click here</button>
+	<p>click on me</p>
 </body>
 </html>
