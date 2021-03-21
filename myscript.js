@@ -1,35 +1,27 @@
-// DOM set method
+// DOM query selector (css selector)
 var element;
-// innerText
-element=document.getElementById('header')
-.innerText='<h2>in text tag not works</h2>';
-// innerHTML
-element=document.getElementById('header')
-.innerHTML='<h1>overwrited div</h1>i am visible';
-// setAttribute --in #header class abc replace to pqr
-document.getElementById('header')
-.setAttribute('class','pqr');
-// get after set attribute then work console.log
-element=document.getElementById('header')
-.getAttributeNode('class');
-// more priority then these style inside HTML
-document.getElementById('header')
-.setAttribute('style',"border: 1px dotted blue");
-
-element=document.getElementById('header')
-.getAttributeNode('style');
-// attributeof header of 1 index now  replace to xyz
-document.getElementById('header')
-.attributes[1].value='xyz';
-
-element=document.getElementById('header').attributes[1];
-// sort form direct set it to var elemet
-element=document.getElementById('header')
-.attributes[1].value="zxc";
-// removeAttribute now #header's class removed from all 
-document.getElementById('header')
-.removeAttribute('class');
-// show null in console because class name removed
-element=document.getElementById('header')
-.getAttributeNode('class');
+// 1st class of list select if many avilable
+element=document.querySelector('.list');
+// taking all list class in array form
+element=document.querySelectorAll('.list');
+// take index 1 of array of class list 
+element=document.querySelectorAll('.list')[1];
+// show only text without inside tag 
+// of index 1 of array of class list
+element=document.querySelectorAll('.list')[1].innerText;
+// also work innerHTML
+element=document.querySelectorAll('.list')[1].innerHTML;
+// show in this type --<ul class="list">…</ul>
+element=document.querySelector('ul');
+// NodeList [ul.list] --show in this type
+// 0: ul.list
+// length: 1
+element=document.querySelectorAll('ul');
+// NodeList(2) [h2, h2] --show like these
+// 0: h2
+// 1: h2
+// length: 2
+element=document.querySelectorAll('#content h2');
+// <h2>i'm 2nd heading2</h2> --show h2 of index 1
+element=document.querySelectorAll('#content h2')[1];
 console.log(element);
