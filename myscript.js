@@ -74,7 +74,40 @@ document.querySelector('#header2')
 });
 // use of-- this (very sorthand property)
 // click on div of id header color chhange tan to red
-document.querySelector('#header').addEventListener('click',function(){
+document.querySelector('#header')
+.addEventListener('click',function(){
 	this.style.backgroundColor='red';
 });
+// DOM use capture-- true, false is default value
+// with true in .outer and .inner click
+// inner then 1st alert outer and then inner.
+// without true in .outer and .inner click 
+// inner then 1st alert inner and then outer.
+document.querySelector(".outer")
+.addEventListener('click',function(){
+	alert('outer div');
+},true);
+document.querySelector('.inner')
+.addEventListener('click',function(){
+	alert('inner div');
+},true);
+// DOM removeEventListener method
+// when leavemoouse without click on it then xxx 
+// fn. run and color yellow shown on div of id header3 &
+// when first click on div of id header3 then rmv fn. run 
+// (which says on mouseleave xxx fn. removed) and now color 
+// not change to yellow
+document.querySelector('#header3')
+.addEventListener('mouseleave',xxx);
+function xxx(){
+	document.querySelector('#header3')
+	.style.backgroundColor='yellow';
+}
+document.querySelector('#header3')
+.addEventListener('click',rmv);
+function rmv(){
+
+	this.removeEventListener('mouseleave',xxx);
+}
+
 console.log(element);
