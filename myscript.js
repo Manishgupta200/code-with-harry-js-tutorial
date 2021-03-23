@@ -1,12 +1,18 @@
-// DOM cloneNode method
-var target=document.getElementById('list-a').children[0];
-// it copy <li></li> from #lisa-a
-// if nothing say true and false then default value it false which copies only tags and attributes not inner text
-var copyElement=target.cloneNode();
-
-// it copy <li>list-a1</li> from #lisa-a
-var copyElement=target.cloneNode(true);
-// <li>list-a1</li>
-console.log(copyElement);
-
-document.getElementById('list-b').appendChild(copyElement);
+// DOM contains method
+// returns true and false only
+// By using this method we can find inner or inner of inner tag by targeting outer tag
+var parentElement=document.getElementById('test');
+var target=document.querySelector('#abc');
+// true--return
+var find=parentElement.contains(target);
+console.log(find);
+// DOM hasAttribute mtehod
+// By using this method we can check another attribute's are avilable or not in same tag by targetting one specific attribute in same tag
+var find2=parentElement.hasAttribute('class');
+// true --return
+console.log(find2);
+// DOM hasChildNodes method
+// check that is any child nodes avilable or not which i targetting (parentElement).If simple text,enter,comment etc avilable then also retrn true
+var find3=parentElement.hasChildNodes();
+// true --return
+console.log(find3);
