@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="main">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +11,16 @@
 	<!-- script.js -->
 </head>
 <body>
-	<div id="header" class="xyz">div of #header .xyz</div>
-<!-- for line 55 of js start -->
-	<div id="header2" class="abc def ghi">div of #header2 .abc .def .ghi</div>
-<!-- for line 55 of js end -->
+	<div id="outer">outer
+		<div id="inner">
+			<span>inner1</span><!-- for childNodes -->
+			<div>a</div>
+			<div>b</div>
+			<div id="child-c">child-c</div><!-- for nextSibling -->
+			<div>d</div>
+			<div>e</div>
+		</div>
+	</div>
 	<script src="myscript.js"></script>
 </body>
 </html>
