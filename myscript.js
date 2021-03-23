@@ -1,9 +1,5 @@
-// DOM replaceChild
-var newElement=document.createElement('li');
-var newText=document.createTextNode('new list1');
-newElement.appendChild(newText);
-
+// DOM removeChild
 var target=document.querySelector('#list');
-var oldElement=target.children[0];
-// list1 is replaced new list1 is comming
-target.replaceChild(newElement,oldElement);
+var list1=target.children[0];
+
+target.removeChild(list1);
