@@ -1,18 +1,10 @@
-// DOM contains method
-// returns true and false only
-// By using this method we can find inner or inner of inner tag by targeting outer tag
-var parentElement=document.getElementById('test');
-var target=document.querySelector('#abc');
-// true--return
-var find=parentElement.contains(target);
-console.log(find);
-// DOM hasAttribute mtehod
-// By using this method we can check another attribute's are avilable or not in same tag by targetting one specific attribute in same tag
-var find2=parentElement.hasAttribute('class');
+// DOM isEqualNode()
+var target1=document.getElementById('list1').firstElementChild;
+var target2=document.getElementById('list2').children[1];
 // true --return
-console.log(find2);
-// DOM hasChildNodes method
-// check that is any child nodes avilable or not which i targetting (parentElement).If simple text,enter,comment etc avilable then also retrn true
-var find3=parentElement.hasChildNodes();
-// true --return
-console.log(find3);
+// actually it compare two things if match then return true else false
+var comp=target1.isEqualNode(target2);
+
+console.log(target1);
+console.log(target2);
+console.log(comp);
