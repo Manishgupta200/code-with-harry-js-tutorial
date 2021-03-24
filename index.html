@@ -6,62 +6,20 @@
 	<title>js</title>
 	<!-- js -->
 	<script>
-		// onfocus color shows green 
-		function focusFn(parameter){
-			parameter.style.backgroundColor='lime';
-		}
-		// onblur color sows green
-		function blurFn(parameter){
-			parameter.style.backgroundColor='yellow';
-		}
-		// oninput text also written in div of #test at same time
-		function inputFn(parameter){
-			var x=parameter.value;
-			document.getElementById('test').innerHTML=x;
-		}
-		// onchange select options value also written in div of #test at same time
-		function changeFn(element){
-			var x=element.value;
-			document.getElementById('test').innerHTML=x;
-		}
-		// if select three times then three times write 'you select it' in console
-		function selectFn(parameter){
-			console.log('you select it');
-		}
-
-		function submitFn(element){
-			var p=confirm('are you sure want to submit this form');
-			if(p){
-			var y=document.querySelector('#name').value;
-			alert('thanks for submit this form '+ y);
-			}
-			else{
-				alert('sorry');
-			}
-		}
+		
 	</script>
-	<!-- script.js -->
+	<!-- css -->
+	<style>
+		#test{
+			background-color: tomato;
+			height: 100px;
+			width: 100px;
+		}
+	</style>
 </head>
 <body>
-	<form action="" onsubmit="submitFn(this)">
-		<label for="">name:</label>
-		<input type="text" id="name" onfocus="focusFn(this)" onblur="blurFn(this)" oninput="inputFn(this)" oninvalid="alert('please fill the firstname')" required>
-		<br><br>
-		<label for="">class:</label>
-		<input type="text" id="class" onselect="selectFn(this)">
-		<br><br>
-		<label for="">country:</label>
-		<select name="" id="" onchange="changeFn(this)">
-			<option value="1st">india</option>
-			<option value="2nd">pakistan</option>
-			<option value="3rd">america</option>
-			<option value="4th">china</option>
-		</select>
-		<br><br>
-		<label for="">oninvalid</label>
-		<input type="submit">
-	</form>
 	<div id="test"></div>
+	<!-- script.js -->
 	<script src="myscript.js"></script>
 </body>
 </html>
