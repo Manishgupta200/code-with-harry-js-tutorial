@@ -8,12 +8,16 @@ var a=0;
 // .
 // .
 // . 
-setInterval(anime,1000);
-
+var id=setInterval(anime,1000);
 function anime(){
-	a=a+10;
-	console.log(a);
 
+	a=a+10;
 	var target=document.getElementById('test');
 	target.style.marginLeft=a+'px';
+	console.log(a);
+// clearInterval()
+// if a=100 reach the after it setInterval() is cear
+	if(a==100){
+		clearInterval(id);
+	}
 }
