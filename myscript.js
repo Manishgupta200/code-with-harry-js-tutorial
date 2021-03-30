@@ -1,10 +1,10 @@
-// array
-var sum=0;
-var ary=[10,20,30,40,50,10];
-document.write("<ul style='font-weight:bold'>");
-for(var a=0;a<ary.length;a++){
-	document.write("<li>",ary[a],'</li>');
-	sum=sum+ary[a];
+// array new method
+var ary=new Array();
+ary[0]=10;
+ary[1]='harry';
+ary[3]=true;
+document.write("<ul>");
+for(var a=0;a<=ary.length;a++){
+	document.write('<li>',ary[a],'</li>');
 }
-document.write('</ul>');
-document.write("SUM is: ",sum);
+document.write("</ul>");
