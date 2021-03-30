@@ -1,8 +1,11 @@
 // BOM (browser object module)
-// scrollBy()
+// scrollTo()
 function scrollWindow(){
-// x axis horizontalscroll(left -ve, right +ve) & y axis vertical scroll(above -ve, below +ve)
-// here x=0,y=20
-// click on scrollWindow btn again and again then 20 px scroll down symeltaneousy
-	window.scrollBy(0,20);
+// page is in top and left position
+// this is defult position also
+	window.scrollTo(0,0);
+// on click on scrollWindow btn window are scroll down by 50px once time only
+	window.scrollTo(0,50);
 }
+// scrollTo() works one time only
+// scrollTo() takes absolute position
