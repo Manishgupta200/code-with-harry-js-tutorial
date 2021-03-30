@@ -11,5 +11,3 @@ function moveWindow(){
 // focus on new window after move in through 1st window
 	myWindow.focus();
 }
-
-
