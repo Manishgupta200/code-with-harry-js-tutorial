@@ -1,58 +1,48 @@
-// MATH METHOD
-// works when no. is in float type
-// for all no. upper value return
-// like opposite of box of x in mathematics
-// 6 --return
-var a=Math.ceil(5.2);
-// -1 --return
-var a=Math.ceil(-1.45);
-// works when no. is in float type
-// for all no.lower value return
-// 5 --return
-var a=Math.floor(5.2);
-// -2 --return
-var a=Math.floor(-1.45);
-// work with float data type
-// if no. above .5 return upper value otherwise return lower value in integer type 
+// DETE METHOD
+// get method
+var now=new Date();
+// that's came from system not server
+// js is clint site script which load in system first and then run
+// Wed Mar 31 2021 18:14:20 GMT+0530 (India Standard Time) --return
+document.write(now,'<br>');
+// Wed Mar 31 2021 --return
+document.write(now.toDateString(),'<br>');
+// 31 --return
+document.write(now.getDate(),'<br>');
+// 2021 --return
+document.write(now.getFullYear(),'<br>');
+// in js jan:0,fab:1,...
 // 2 --return
-var a=Math.round(2.40);
+document.write(now.getMonth(),'<br>');
+// in js sun:0,mon:1,...
 // 3 --return
-var a=Math.round(2.55);
-// it returns only integer value without any changes
-// 2 --return
-var a=Math.trunc(2.49);
-// 2 --return
-var a=Math.trunc(2.99);
-// return max. no.
-// 10 --return
-var a=Math.max(-8,10,3,5,9,8);
-// return min. no.
-// -8 --return
-var a=Math.min(-8,10,3,5,9,8);
-// return square root of no.
-// 5 --return
-var a=Math.sqrt(25);
-// return cubit root of no.
-// 4 --return
-var a=Math.cbrt(64);
-// it returns 2 to the power 3 
-// 8 --return
-var a=Math.pow(2,3)
-// by default return between 0-1
-var a=Math.random();
-// return between 0-10; only integer value return because of Math.floor() fn.
-// by adding 1 ans goes fromm 0-10 otherwise ans. fron 0-9 any
-var a=Math.floor(Math.random()*10)+1;
-// return  absolute value
-// 5.25 --return
-var a=Math.abs(5.25);
-// 5.65 --return
-var a=Math.abs(-5.65);
+document.write(now.getDay(),'<br>');
+// returnin 24 hr format
+// 18 --return
+document.write(now.getHours(),'<br>');
+// 34 --return
+document.write(now.getMinutes(),'<br>');
+// 7 -return
+document.write(now.getSeconds(),'<br>');
+// 564 --return
+document.write(now.getMilliseconds(),'<br>');
+
+// set method
+var now=new Date('April 1 2021');
+var now=new Date('april 1 2021');
+// 4 --return which means thursday
+document.write(now.getDay(),'<br>');
 // 0 --return
-var a=Math.abs(null);
-// 3 --return
-var a=Math.abs(-5+2);
-// return PI(22/7) value
-// 3.141592653589793 --return
-var a=Math.PI;
-document.write(a);
+document.write(now.getHours(),'<br>');
+
+var now=new Date();
+// date are set 20
+// Tue Apr 20 2021 10:43:36 GMT+0530 (India Standard Time) --return
+now.setDate(20);
+// month are set january
+// Wed Jan 20 2021 10:45:03 GMT+0530 (India Standard Time) --return
+now.setMonth(0);
+document.write(now,'<br>');
+
+var now=new Date();
+document.write(now.getDate(),'/',1+now.getMonth(),'/',now.getFullYear());
